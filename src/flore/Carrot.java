@@ -1,10 +1,16 @@
 package flore;
 
-public class Beet extends Vegetable {
+import java.util.Map;
 
-    public Beet() {
-        super(VegetableState.GRAINE);
-        getDraw().put(VegetableState.FEUILLE, "a");
-        getDraw().put(VegetableState.FLEUR, "A");
+public class Carrot extends Vegetable implements IRacePure {
+
+    public Carrot() {
+        draw[VegetableState.FEUILLE.ordinal()] = "c";
+        draw[VegetableState.FLEUR.ordinal()] = "C";
+    }
+
+    @Override
+    public void reproduce(Map<String, Integer> cart) {
+        cart.put("carotte", cart.get("carotte") + 3);
     }
 }

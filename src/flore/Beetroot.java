@@ -1,9 +1,18 @@
 package flore;
 
-public class Beet extends Vegetable {
+import java.util.AbstractMap;
+import java.util.Random;
 
-    public Beet() {
+public class Beetroot extends Vegetable implements IOGM {
+
+    public Beetroot() {
         draw[VegetableState.FEUILLE.ordinal()] = "b";
         draw[VegetableState.FLEUR.ordinal()] = "B";
+    }
+
+    @Override
+    public AbstractMap.SimpleEntry<Integer, Integer> duplicate(int x, int y) {
+        Random random = new Random();
+        return new AbstractMap.SimpleEntry<>(random.nextInt(0, x), random.nextInt(0, y));
     }
 }

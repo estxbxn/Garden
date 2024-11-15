@@ -1,10 +1,9 @@
 package flore;
 
-public class Beet extends Vegetable {
+public class Tomato extends Vegetable {
 
-    public Beet() {
-        super(VegetableState.GRAINE);
-        getDraw().put(VegetableState.FEUILLE, "a");
-        getDraw().put(VegetableState.FLEUR, "A");
+    public Tomato() {
+        draw[VegetableState.FEUILLE.ordinal()] = "t";
+        draw[VegetableState.FLEUR.ordinal()] = "T";
     }
 }
