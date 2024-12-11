@@ -19,8 +19,8 @@ public abstract class Vegetable {
         this.state = VegetableState.values()[this.state.ordinal() + 1];
     }
 
-    public VegetableState getState() {
-        return state;
+    public boolean isHarvestable() {
+        return state == VegetableState.FLOWER;
     }
 
     @Override

@@ -13,6 +13,8 @@ public class Beetroot extends Vegetable implements IOGM {
     @Override
     public AbstractMap.SimpleEntry<Integer, Integer> duplicate(int x, int y) {
         Random random = new Random();
-        return new AbstractMap.SimpleEntry<>(random.nextInt(0, x), random.nextInt(0, y));
+        int newX = random.nextInt(0, x);
+        int newY = random.nextInt(0, y);
+        return new AbstractMap.SimpleEntry<>(newX, newY);
     }
 }
