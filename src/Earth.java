@@ -20,8 +20,6 @@ public class Earth {
 
     public static void run(Garden garden) {
         // Display options
-        System.out.println();
-        System.out.println();
         System.out.println("Choose an option:");
         System.out.println("1. Sow seeds");
         System.out.println("2. Harvest mature plants");
@@ -46,6 +44,6 @@ public class Earth {
         }
 
         // Display the final garden
-        garden.toString();
+        System.out.println(garden);
     }
 }

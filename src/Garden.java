@@ -183,38 +183,29 @@ public class Garden {
 
     @Override
     public String toString() {
-        System.out.println("There is our garden :");
-        for (int i = 0; i < length; i++) {
-            for (int j = 0; j < width; j++) {
-                Location plantLocation = locations[j][i];
+        StringBuilder gardenRepresentation = new StringBuilder();
+
+        gardenRepresentation.append("There is our garden:\n");
+        for (int x = 0; x < length; x++) {
+            for (int y = 0; y < width; y++) {
+                Location plantLocation = locations[x][y];
                 if (plantLocation == null) {
-                    System.out.print("o");
-                    continue;
+                    gardenRepresentation.append("o");
+                } else {
+                    gardenRepresentation.append(plantLocation);
                 }
-                System.out.print(plantLocation);
             }
-            System.out.println();
+            gardenRepresentation.append("\n");
         }
-        System.out.println("Cart contents :");
+
+        gardenRepresentation.append("Cart contents:\n");
         for (String type : cart.keySet()) {
-            System.out.println(type + " : " + cart.get(type) + " seed(s)");
+            gardenRepresentation.append(type)
+                    .append(" : ")
+                    .append(cart.get(type))
+                    .append(" seed(s)\n");
         }
-        return null;
-    }
 
-    public int getWidth() {
-        return width;
-    }
-
-    public int getLength() {
-        return length;
-    }
-
-    public Location[][] getLocations() {
-        return locations;
-    }
-
-    public Map<String, Integer> getCart() {
-        return cart;
+        return gardenRepresentation.toString();
     }
 }
