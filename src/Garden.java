@@ -42,10 +42,10 @@ public class Garden {
         String seedName = scanner.next();
         Vegetable seed;
         switch (seedName) {
-            case "tomate" -> seed = new Tomato();
-            case "carotte" -> seed = new Carrot();
-            case "ail" -> seed = new Garlic();
-            case "betterave" -> seed = new Beetroot();
+            case "tomato" -> seed = new Tomato();
+            case "carrot" -> seed = new Carrot();
+            case "garlic" -> seed = new Garlic();
+            case "beetroot" -> seed = new Beetroot();
             default -> {
                 System.out.println("Please enter a valid seed name.");
                 return;

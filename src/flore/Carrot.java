@@ -11,6 +11,6 @@ public class Carrot extends Vegetable implements IRacePure {
 
     @Override
     public void reproduce(Map<String, Integer> cart) {
-        cart.put("carotte", cart.get("carotte") + 3);
+        cart.put("carrot", cart.get("carrot") + 3);
     }
 }

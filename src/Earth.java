@@ -4,13 +4,13 @@ public class Earth {
 
     public static void main(String[] args) {
         // Garden
-        Garden garden = new Garden(2, 1);
+        Garden garden = new Garden(5, 5);
 
         // Add seeds to cart
-        garden.addToCart("betterave", 4);
-        garden.addToCart("carotte", 10);
-        garden.addToCart("tomate", 10);
-        garden.addToCart("ail", 10);
+        garden.addToCart("beetroot", 4);
+        garden.addToCart("carrot", 10);
+        garden.addToCart("tomato", 10);
+        garden.addToCart("garlic", 10);
 
         while (true) {
             // Run the garden
