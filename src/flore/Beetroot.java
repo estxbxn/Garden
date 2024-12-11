@@ -6,8 +6,8 @@ import java.util.Random;
 public class Beetroot extends Vegetable implements IOGM {
 
     public Beetroot() {
-        draw[VegetableState.FEUILLE.ordinal()] = "b";
-        draw[VegetableState.FLEUR.ordinal()] = "B";
+        draw[VegetableState.LEAF.ordinal()] = 'b';
+        draw[VegetableState.FLOWER.ordinal()] = 'B';
     }
 
     @Override

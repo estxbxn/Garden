@@ -18,6 +18,6 @@ public class Location {
 
     @Override
     public String toString() {
-        return vegetable.getDraw()[vegetable.getState().ordinal()];
+        return vegetable.toString();
     }
 }

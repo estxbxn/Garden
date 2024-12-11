@@ -3,20 +3,19 @@ package flore;
 public abstract class Vegetable {
 
     private VegetableState state;
-    protected final String[] draw;
+    protected final char[] draw;
 
     public Vegetable() {
-        this.state = VegetableState.GRAINE;
-        this.draw = new String[VegetableState.values().length];
-        draw[VegetableState.GRAINE.ordinal()] = "_";
-        draw[VegetableState.GERME.ordinal()] = ".";
-        draw[VegetableState.TIGE.ordinal()] = "|";
-        draw[VegetableState.MORT.ordinal()] = "#";
+        this.state = VegetableState.SEED;
+        this.draw = new char[VegetableState.values().length];
+        draw[VegetableState.SEED.ordinal()] = '_';
+        draw[VegetableState.SPROUT.ordinal()] = '.';
+        draw[VegetableState.STEM.ordinal()] = '|';
+        draw[VegetableState.DEAD.ordinal()] = '#';
     }
 
     public void grow() {
-        if (state == VegetableState.MORT) return;
-
+        if (state == VegetableState.DEAD) return;
         this.state = VegetableState.values()[this.state.ordinal() + 1];
     }
 
@@ -24,7 +23,8 @@ public abstract class Vegetable {
         return state;
     }
 
-    public String[] getDraw() {
-        return draw;
+    @Override
+    public String toString() {
+        return String.valueOf(draw[state.ordinal()]);
     }
 }

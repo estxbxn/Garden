@@ -5,8 +5,8 @@ import java.util.Map;
 public class Garlic extends Vegetable implements IRacePure {
 
     public Garlic() {
-        draw[VegetableState.FEUILLE.ordinal()] = "g";
-        draw[VegetableState.FLEUR.ordinal()] = "G";
+        draw[VegetableState.LEAF.ordinal()] = 'g';
+        draw[VegetableState.FLOWER.ordinal()] = 'G';
     }
 
     @Override

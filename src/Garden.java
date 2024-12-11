@@ -99,7 +99,7 @@ public class Garden {
 
         Vegetable currentVegetable = location.getVegetable();
 
-        if (currentVegetable.getState() != VegetableState.FLEUR) {
+        if (currentVegetable.getState() != VegetableState.FLOWER) {
             System.out.println("This seed can't be harvest for now.");
             return;
         }

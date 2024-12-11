@@ -5,8 +5,8 @@ import java.util.Map;
 public class Carrot extends Vegetable implements IRacePure {
 
     public Carrot() {
-        draw[VegetableState.FEUILLE.ordinal()] = "c";
-        draw[VegetableState.FLEUR.ordinal()] = "C";
+        draw[VegetableState.LEAF.ordinal()] = 'c';
+        draw[VegetableState.FLOWER.ordinal()] = 'C';
     }
 
     @Override
